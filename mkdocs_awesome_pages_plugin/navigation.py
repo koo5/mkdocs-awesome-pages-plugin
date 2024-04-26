@@ -100,7 +100,9 @@ class AwesomeNavigation:
             key = lambda i: self._get_item_title(i)
         else:
             key = lambda i: basename(self._get_item_path(i))
-
+		
+		key = key.lower()
+			
         if sort_type == Meta.SORT_NATURAL:
             key = natsort_keygen(key)
 
